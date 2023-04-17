@@ -7,6 +7,11 @@ import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 import Layout from "./pages/Layout";
 import { useSelector } from "react-redux";
+import DashboardLayout from "./pages/DashboardLayout";
+import Profile from "./pages/Profile";
+import ListProperty from "./pages/ListProperty";
+
+
 
 function App() {
   const { token } = useSelector(state => state.auth)
@@ -21,7 +26,12 @@ function App() {
             <Route path="sendpasswordresetemail" element={<SendPasswordResetEmail />} />
             <Route path="api/user/reset/:id/:token" element={<ResetPassword />} />
           </Route>
-          <Route path="/dashboard" element={token ? <Dashboard /> : <Navigate to="/login" />} />
+          <Route path="/dashboard" element={<DashboardLayout />}>
+            <Route index element={<Navigate to="/dashboard/profile" />} />
+            <Route path="profile" element={token ? <Profile /> : <Navigate to="/login" />} />
+            <Route path="listproperty" element={token ? <ListProperty /> : <Navigate to="/login" />} />
+
+          </Route>
           <Route path="*" element={<h1>Error 404 Page not found !!</h1>} />
         </Routes>
       </BrowserRouter>
