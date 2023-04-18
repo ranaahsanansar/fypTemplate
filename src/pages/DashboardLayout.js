@@ -77,7 +77,8 @@ const DashboardLayout = () => {
           }}
         >
           <Box sx={{ mb: '20px' }}>
-            <Typography variant="h3">Dashboard</Typography>
+            {/* <Typography variant="h3">Dashboard</Typography> */}
+            <h1>Dashboard</h1>
           </Box>
           
 
@@ -161,11 +162,10 @@ const DashboardLayout = () => {
         sx={{height: {lg: '90vh', md: '90vh' , sm: 'auto' , xs: 'auto'},
         overflow: 'scroll'}}
         >
-          <ChangePassword />
+          {/* <ChangePassword /> */}
           <Outlet />
         </Grid>
       </Grid>
-      <Outlet />
     </div>
   );
 };
