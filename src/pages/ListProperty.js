@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ImgMediaCard from "../components/PropertyCard";
 import { Box, Button, Container, Grid } from "@mui/material";
+import AddProperty from "./AddProperty";
 
 const ListProperty = () => {
   const [displayForm, setDisplayForm] = useState(false);
@@ -22,15 +23,15 @@ const ListProperty = () => {
                 {displayForm ? "Close Form" : "Add New Property"}
               </Button>
             </Box>
+            <Box>
+            {displayForm ? (
+              <AddProperty />
+            ) : ("")}
+            </Box>
+
             <Box
               mt={2}
-              sx={{
-                border: "2px solid black",
-                padding: "20px",
-                borderRadius: "10px",
-                height: "70vh",
-                overflow: "scroll",
-              }}
+              
             >
               <Grid container spacing={2}>
                 <Grid item sm={6} xs={12} lg={4}>

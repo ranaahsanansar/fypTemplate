@@ -80,7 +80,9 @@ const Profile = () => {
                             24
                           </Typography>
                         ) : (
-                          <Typography variant="h5" fontSize="small">
+                          <Typography variant="h3"
+                          fontWeight="bold"
+                          fontSize="large">
                             Connect Wallet
                           </Typography>
                         )}
@@ -109,7 +111,9 @@ const Profile = () => {
                             10
                           </Typography>
                         ) : (
-                          <Typography variant="h5" fontSize="small">
+                          <Typography variant="h3"
+                          fontWeight="bold"
+                          fontSize="large">
                             Connect Wallet
                           </Typography>
                         )}
@@ -139,7 +143,9 @@ const Profile = () => {
                           Approved
                         </Typography>
                         ) : (
-                          <Typography variant="h5" fontSize="small">
+                          <Typography variant="h3"
+                          fontWeight="bold"
+                          fontSize="large">
                             Connect Wallet
                           </Typography>
                         )}

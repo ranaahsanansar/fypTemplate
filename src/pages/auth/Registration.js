@@ -16,7 +16,7 @@ const Registration = () => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     const actualData = {
-      name: data.get('name'),
+      name: data.get('name'), 
       email: data.get('email'),
       password: data.get('password'),
       password_confirmation: data.get('password_confirmation'),

@@ -108,7 +108,7 @@ const DashboardLayout = () => {
             <Button
               component={NavLink}
               variant="contained"
-              to="/"
+              to="/dashboard/buyPropertyBlockchain"
               style={({ isActive }) => {
                 return { backgroundColor: isActive ? "#6d1b7b" : "" };
               }}
@@ -119,7 +119,7 @@ const DashboardLayout = () => {
             <Button
               component={NavLink}
               variant="contained"
-              to="/"
+              to="/dashboard/sellPropertyBlockchain"
               style={({ isActive }) => {
                 return { backgroundColor: isActive ? "#6d1b7b" : "" };
               }}
@@ -130,7 +130,7 @@ const DashboardLayout = () => {
             <Button
               component={NavLink}
               variant="contained"
-              to="/"
+              to="/dashboard/changePassword"
               style={({ isActive }) => {
                 return { backgroundColor: isActive ? "#6d1b7b" : "" };
               }}
