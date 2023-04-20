@@ -20,7 +20,19 @@ const Profile = () => {
               <Box sx={{ backgroundColor: "red", borderRadius: 2, padding: 1 }}>
                 <h1>Rana Ahsan Ansar</h1>
                 {
-                  walletConnection ? (<p>0x999999cf1046e68e36E1aA2E0E07105eDDD1f08E</p>) : (<p>Connect your crypto Wallet to communicate with Blockchain</p>)
+                  walletConnection ? (<Typography  sx={{
+                    display: '-webkit-box',
+                    overflow: 'scroll',
+                    WebkitBoxOrient: 'vertical',
+                    WebkitLineClamp: 3,
+                    '&::-webkit-scrollbar': {
+                      display: "none"
+                  },
+                  '&::-webkit-scrollbar-thumb': {
+                      backgroundColor: `rgba(0, 0, 0, 0.05)`,
+                      display: "none"
+                  }
+                }}>0x999999cf1046e68e36E1aA2E0E07105eDDD1f08E</Typography>) : (<Typography>Connect your crypto Wallet to communicate with Blockchain</Typography>)
                 }
                 
                 <Box

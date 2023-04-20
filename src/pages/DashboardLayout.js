@@ -73,7 +73,14 @@ const DashboardLayout = () => {
             color: "white",
             display: { xs: "none", sm: "none", md: "block" },
             height: {lg: '90vh', md: '90vh' , sm: 'auto' , xs: 'auto'},
-            overflow: 'scroll'
+            overflow: 'scroll',
+            '&::-webkit-scrollbar': {
+              display: "none"
+          },
+          '&::-webkit-scrollbar-thumb': {
+              backgroundColor: `rgba(0, 0, 0, 0.05)`,
+              display: "none"
+          }
           }}
         >
           <Box sx={{ mb: '20px' }}>
@@ -160,7 +167,13 @@ const DashboardLayout = () => {
         </Grid>
         <Grid item sm={12} lg={9} md={9} xs={12}
         sx={{height: {lg: '90vh', md: '90vh' , sm: 'auto' , xs: 'auto'},
-        overflow: 'scroll'}}
+        overflow: 'scroll' , '&::-webkit-scrollbar': {
+          display: "none"
+      },
+      '&::-webkit-scrollbar-thumb': {
+          backgroundColor: `rgba(0, 0, 0, 0.05)`,
+          display: "none"
+      }}}
         >
           {/* <ChangePassword /> */}
           <Outlet />
