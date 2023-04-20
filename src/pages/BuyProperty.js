@@ -20,7 +20,8 @@ const BuyProperty = () => {
 
   const [distric , setDistric ] = useState('lahore');
   const [province , setProvince ] = useState('punjab');
-  const [colony , setColony ] = useState('park-view');
+  const [society , setSociety ] = useState('none');
+  const [block , setBlock ] = useState('park-view');
   
 
   const handleChangeProvience = (event) => {
@@ -29,8 +30,11 @@ const BuyProperty = () => {
   const handleChangeDistric = (event) => {
     setDistric(event.target.value);
   };
-  const handleChangeColony = (event) => {
-    setColony(event.target.value);
+  const handleChangeSociety = (event) => {
+    setSociety(event.target.value);
+  };
+  const handleChangeBlock = (event) => {
+    setBlock(event.target.value);
   };
 
   return (
@@ -109,23 +113,46 @@ const BuyProperty = () => {
                     </FormControl>
                   </Grid>
 
-                  <Grid item sm={12} xs={12} md={12} lg={12}>
+                  <Grid item sm={12} xs={12} md={6} lg={6}>
                     <FormControl fullWidth>
-                      <InputLabel id="colony-label">Contracts</InputLabel>
+                      <InputLabel id="society-label">Society</InputLabel>
 
                       <Select
                         fullWidth
                         required
-                        labelId="colony-label"
-                        id="colony"
-                        value={colony}
-                        label="colony"
-                        onChange={handleChangeColony}
+                        labelId="society-label"
+                        id="society" 
+                        value={society}
+                        label="society"
+                        onChange={handleChangeSociety}
                       >
+                        <MenuItem value="none">None</MenuItem>
                         <MenuItem value="park-view">Park View</MenuItem>
                         <MenuItem value="bahria">Bahria</MenuItem>
                         <MenuItem value="rehman-garden">Rehman Garden</MenuItem>
                         <MenuItem value="iqbal-town">Iqbal Town</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </Grid>
+
+                  <Grid item sm={12} xs={12} md={6} lg={6}>
+                    <FormControl fullWidth>
+                      <InputLabel id="block-label">Block</InputLabel>
+
+                      <Select
+                        fullWidth
+                        required
+                        labelId="block-label"
+                        id="block" 
+                        value={block}
+                        label="block"
+                        onChange={handleChangeBlock}
+                      >
+                        <MenuItem value="none">None</MenuItem>
+                        <MenuItem value="park-view">A Block</MenuItem>
+                        <MenuItem value="bahria">B Block</MenuItem>
+                        <MenuItem value="rehman-garden">X Block</MenuItem>
+                        <MenuItem value="iqbal-town">Y Block</MenuItem>
                       </Select>
                     </FormControl>
                   </Grid>

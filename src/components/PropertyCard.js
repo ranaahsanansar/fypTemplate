@@ -13,11 +13,11 @@ export default function ImgMediaCard() {
         component="img"
         alt="green iguana"
         height="140"
-        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9CfTcFVciKE2U25S4w58SkNPGy0FJFxGVZU7z22XW&s"
+        image="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=600"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          Plot
         </Typography>
         <Typography variant="body2" color="text.secondary">
           Lizards are a widespread group of squamate reptiles, with over 6,000
@@ -25,8 +25,9 @@ export default function ImgMediaCard() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button size="small">View</Button>
+        <Button size="small">Edit</Button>
+        <Button size="small"><Typography sx={{color: 'red'}} >Delete</Typography> </Button>
       </CardActions>
     </Card>
   );
